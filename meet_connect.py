@@ -84,12 +84,21 @@ def join(calender_return, current_time):
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
     # ---------creating webdriver instance----------
     driver = webdriver.Chrome(PATH, options=options)
 
     # opening link in webbrowser
     driver.get(link_to_go)
+
+    app_chrome = Application().connect(
+        title_re='.*Start Your Meeting.*')
+
+    app_chrome_window = app_chrome.window(title_re='.*Start Your Meeting.*')
+    if app_chrome_window.exists():
+        app_chrome_window.set_focus()
+
     # wait till the link get loaded
     WebDriverWait(driver, 60)
 
@@ -117,6 +126,7 @@ def join(calender_return, current_time):
             app_window.set_focus()
             time.sleep(7)
             send_keys("{ENTER}")
+            send_keys("{ENTER}")
 
             driver.close()
     except Exception as e:
@@ -134,4 +144,9 @@ while(1):
     meet = list(cal['Start'])
     nowTime = datetime.datetime.now().strftime("%H:%M")
     if nowTime in meet:
-        join(cal, nowTime)
+        try:
+            join(cal, nowTime)
+            cal = {}
+        except Exception as e:
+            print(
+                f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}")
