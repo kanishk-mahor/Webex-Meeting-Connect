@@ -1,5 +1,5 @@
 # ======================================================================================================================
-#                 Copyright (C) 2020 Kanishk Mahor - All rights reserved
+#                 Copyright (C) 2021 Kanishk Mahor - All rights reserved
 # ========================================================================================
 # Notice:  All Rights Reserved.
 # Redistribution and use in source and binary forms, with or without
