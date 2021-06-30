@@ -41,10 +41,12 @@ Used following things to do this task
 Expecting You already have python 3.x and cisco webex meeting application installed in you system.
 
 Clone the repository in local system.
-- Open terminal and give 
+- Open terminal and give
+ 
   pip install -r requirement.txt
   
 - Once installation complete you can run python file
+
   python meet_connect.py 
   
 
