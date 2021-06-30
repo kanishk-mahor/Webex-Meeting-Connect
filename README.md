@@ -4,6 +4,11 @@ Nowadays frequency of virtuals Meeting is increased and to join the Meeting is i
 
 Lets Discuss how it helps.
 
+### Disclaimer:
+
+This code is for educational purposes only and the author is not responsible for any consequences resulted.
+Proceed further if you agree the condition.
+
 ### Pre-requisites
 - Webex Meeting Application
 - python 3.x
@@ -29,6 +34,17 @@ Used following things to do this task
 - pywinauto to automate webex application
 
   [pywinauto Documentation](https://buildmedia.readthedocs.org/media/pdf/pywinauto/latest/pywinauto.pdf)
+  
+  
+## Installation
+
+Expecting You already have python 3.x and cisco webex meeting application installed in you system.
+Clone the repository in local system.
+- Open terminal and give 
+  pip install -r requirement.txt
+  
+- Once installation complete you can run python file
+  python meet_connect.py 
   
 
 ## Authors
