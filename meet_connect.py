@@ -115,12 +115,6 @@ def join(calender_return, current_time):
 
     # --------Connect to cisco webex meetng app----------
     try:
-        # app = wait_until_passes(10, 1, lambda: Application().connect(
-        #     title_re=".*Meetings", class_name="wcl_manager1"))
-
-        # app_window = app.window(title_re=".*Meetings",
-        #                         class_name="wcl_manager1")
-
         app = wait_until_passes(10, 1, lambda: Application().connect(
             title_re=".*Meetings"))
 
